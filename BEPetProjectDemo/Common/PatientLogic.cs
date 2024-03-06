@@ -25,7 +25,7 @@ namespace BEPetProjectDemo
                 dynamic responseData = new ExpandoObject();
                 responseData.success = false;
                 responseData.message = message;
-                responseData.data = null;
+                responseData.Data = null;
                 string json = Newtonsoft.Json.JsonConvert.SerializeObject(responseData);
                 return new BadRequestObjectResult(json);
             }

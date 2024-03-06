@@ -6,6 +6,8 @@ using Microsoft.Azure.Cosmos;
 using System;
 using BEPetProjectDemo.Domain;
 using BEPetProjectDemo.DAL;
+using BEPetProjectDemo;
+using Microsoft.Azure.WebJobs.Hosting;
 [assembly: FunctionsStartup(typeof(BEPetProjectDemo.Startup))]
 namespace BEPetProjectDemo
 {
@@ -32,7 +34,9 @@ namespace BEPetProjectDemo
             });
             builder.Services.PatientDomainServices();
             builder.Services.PatientDALServices();
+
         }
+
  
     }
 }
